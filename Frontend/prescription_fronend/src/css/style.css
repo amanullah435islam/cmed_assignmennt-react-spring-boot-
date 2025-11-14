@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; }
+input, select, textarea { display:block; margin:8px 0; padding:6px; width:300px; }
+button { padding:6px 10px; margin:6px 4px; }
+table { border-collapse: collapse; margin-top:10px; }
