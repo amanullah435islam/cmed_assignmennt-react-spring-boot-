@@ -11,16 +11,14 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/amanullah435islam/cmed_assignmennt-react-spring-boot?style=social)](https://github.com/amanullah435islam/cmed_assignmennt-react-spring-boot/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/amanullah435islam/cmed_assignmennt-react-spring-boot?style=social)](https://github.com/amanullah435islam/cmed_assignmennt-react-spring-boot/network/members)
-
 </div>
 
 <br>
 
 <div align="center">
-
 ## 🎯 Quick Start
-
-```bash
+    
+bash
 # Clone & Setup
 git clone https://github.com/amanullah435islam/cmed_assignmennt-react-spring-boot.git
 cd cmed_assignmennt-react-spring-boot
@@ -33,9 +31,7 @@ cd frontend && npm start
 📍 Access Points:
 
 Frontend: http://localhost:3000
-
 Backend API: http://localhost:8080
-
 H2 Console: http://localhost:8080/h2-console
 
 </div>
