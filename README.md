@@ -1,256 +1,436 @@
-🏥 Hospital Management System
-A comprehensive full-stack hospital management system built with React.js frontend and Spring Boot backend. This application digitalizes the entire prescription workflow with secure authentication and real-time analytics.
+💊 CMED Hospital Management System
+<div align="center">
+https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=java
+https://img.shields.io/badge/Spring%2520Boot-3.5.7-brightgreen?style=for-the-badge&logo=springboot
+https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react
+https://img.shields.io/badge/JWT-Authentication-yellow?style=for-the-badge&logo=jsonwebtokens
+https://img.shields.io/badge/H2-Database-lightgrey?style=for-the-badge&logo=h2
+https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap
+https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge
 
-✨ Features
-🔐 Authentication & Security
-JWT-based secure authentication
-Role-based access control (Doctor/Admin)
-Password encryption with BCrypt
-Secure API endpoints
+A complete full-stack hospital management solution with React frontend and Spring Boot backend
 
-💊 Prescription Management
-Digital prescription creation & management
-Patient record management
-Medicine inventory tracking
-Prescription history
+</div>
+📖 Table of Contents
+🌟 Overview
 
-📊 Analytics & Reporting
-Real-time prescription analytics
-Day-wise prescription statistics
-Patient visit trends
-Export reports functionality
-
-🎨 User Experience
-Responsive design for all devices
-Intuitive doctor dashboard
-Real-time notifications
-Dark/Light theme support
+🚀 Features
 
 🛠️ Tech Stack
-Backend
 
-Framework: Spring Boot 3.5.7
-Language: Java 17
-Security: Spring Security 6.5.6 + JWT
-Database: H2 (Development), MySQL (Production)
-ORM: Spring Data JPA + Hibernate
-Build Tool: Maven
+📁 Project Structure
 
-Frontend
+📦 Installation
 
-Library: React.js 18
-HTTP Client: Axios
-UI Framework: Bootstrap 5 + Custom CSS
-State Management: React Hooks
-Routing: React Router DOM
-Development Tools
-IDE: IntelliJ IDEA, VS Code
-API Testing: Postman
-Version Control: Git & GitHub
-Database Console: H2 Console
+🎯 Usage Guide
 
-🗂️ Project Structure
+🔗 API Endpoints
 
+📊 Database Schema
+
+👨‍💻 Developer
+
+📄 License
+
+🙏 Acknowledgments
+
+🌟 Overview
+CMED Hospital Management System is a modern full-stack web application designed to digitalize hospital operations. It features a React.js frontend with a Spring Boot backend, providing a seamless experience for managing patient prescriptions and hospital workflows.
+
+🎯 Key Benefits
+⚡ Real-time prescription management
+
+🔒 Secure JWT-based authentication
+
+📱 Responsive design for all devices
+
+📊 Advanced analytics and reporting
+
+🏥 Professional healthcare interface
+
+🚀 Features
+🔐 Authentication & Security
+✅ JWT Token-based Authentication
+
+✅ Role-based Access Control (Doctor/Admin)
+
+✅ Secure Password Encryption (BCrypt)
+
+✅ Session Management
+
+✅ Protected API Routes
+
+💊 Prescription Management
+✅ Digital Prescription Creation
+
+✅ Patient Record Management
+
+✅ Prescription History Tracking
+
+✅ Search & Filter Functionality
+
+✅ Bulk Operations Support
+
+📈 Analytics & Dashboard
+✅ Real-time Prescription Analytics
+
+✅ Day-wise Statistics
+
+✅ Peak Hours Identification
+
+✅ Visual Data Representation
+
+✅ Export Reports
+
+🎨 User Experience
+✅ Responsive React Components
+
+✅ Modern Bootstrap UI
+
+✅ Interactive Dashboard
+
+✅ Mobile-Friendly Design
+
+✅ Professional Healthcare Theme
+
+🛠️ Tech Stack
+🖥️ Backend Technologies
+Technology	Version	Purpose
+Java	17	Main Programming Language
+Spring Boot	3.5.7	Application Framework
+Spring Security	6.5.6	Authentication & Authorization
+Spring Data JPA	3.5.7	Database Operations
+JWT	0.11.5	Token-based Authentication
+H2 Database	2.3.232	In-memory Database
+Maven	3.6+	Dependency Management
+💻 Frontend Technologies
+Technology	Version	Purpose
+React.js	18	Frontend Library
+Axios	1.6+	HTTP Client
+React Router DOM	6.8+	Client-side Routing
+Bootstrap	5.3+	UI Framework
+CSS3	-	Custom Styling
+JavaScript ES6+	-	Client-side Logic
+🛠️ Development Tools
+Tool	Purpose
+IntelliJ IDEA	Backend Development
+VS Code	Frontend Development
+Postman	API Testing
+Git & GitHub	Version Control
+H2 Console	Database Management
+📁 Project Structure
+text
 cmed_assignmennt-react-spring-boot/
 │
-├── backend/ (Spring Boot)
-│   ├── src/main/java/com/cmed/
-│   │   ├── controller/     # REST APIs
-│   │   ├── service/        # Business logic
-│   │   ├── repository/     # Data access layer
-│   │   ├── model/          # Entity classes
-│   │   ├── config/         # Security & JWT config
-│   │   └── PrescriptionBootApplication.java
-│   ├── src/main/resources/
-│   │   ├── application.properties
-│   │   └── data.sql        # Initial data
-│   └── pom.xml
+├── 📁 backend/ (Spring Boot Application)
+│   ├── 📁 src/main/java/com/cmed/prescription_boot/
+│   │   ├── 📁 controller/
+│   │   │   ├── AuthController.java          # Authentication APIs
+│   │   │   ├── PrescriptionController.java  # Prescription CRUD APIs
+│   │   │   └── UserController.java          # User Management APIs
+│   │   ├── 📁 service/
+│   │   │   ├── UserService.java             # User business logic
+│   │   │   └── PrescriptionService.java     # Prescription business logic
+│   │   ├── 📁 repository/
+│   │   │   ├── UserRepository.java          # User data access
+│   │   │   └── PrescriptionRepository.java  # Prescription data access
+│   │   ├── 📁 model/
+│   │   │   ├── User.java                    # User entity
+│   │   │   └── Prescription.java            # Prescription entity
+│   │   ├── 📁 config/
+│   │   │   ├── SecurityConfig.java          # Security configuration
+│   │   │   ├── JwtTokenProvider.java        # JWT utilities
+│   │   │   └── JwtAuthenticationFilter.java # JWT filter
+│   │   └── PrescriptionBootApplication.java # Main application class
+│   ├── 📁 src/main/resources/
+│   │   ├── application.properties           # Application configuration
+│   │   └── data.sql                         # Initial data setup
+│   └── pom.xml                             # Maven dependencies
 │
-└── frontend/ (React.js)
-    ├── src/
-    │   ├── components/     # React components
-    │   ├── pages/          # Page components
-    │   ├── services/       # API services
-    │   ├── utils/          # Utilities & config
-    │   └── App.js
+└── 📁 frontend/ (React.js Application)
+    ├── 📁 src/
+    │   ├── 📁 components/
+    │   │   ├── Login.js                     # Login component
+    │   │   ├── Register.js                  # Registration component
+    │   │   ├── Dashboard.js                 # Main dashboard
+    │   │   ├── PrescriptionList.js          # Prescription listing
+    │   │   ├── PrescriptionForm.js          # Add/Edit prescription
+    │   │   └── Analytics.js                 # Analytics component
+    │   ├── 📁 services/
+    │   │   ├── api.js                       # API configuration
+    │   │   ├── authService.js               # Authentication services
+    │   │   └── prescriptionService.js       # Prescription services
+    │   ├── 📁 utils/
+    │   │   ├── auth.js                      # Authentication utilities
+    │   │   └── constants.js                 # Application constants
+    │   ├── 📁 styles/
+    │   │   └── App.css                      # Global styles
+    │   ├── App.js                           # Main App component
+    │   └── index.js                         # Application entry point
     ├── public/
-    └── package.json
+    │   └── index.html                       # HTML template
+    └── package.json                         # NPM dependencies
+📦 Installation
+✅ Prerequisites Checklist
+Java 17 or higher installed
 
-  
-🚀 Quick Start
-Prerequisites
+Node.js 16 or higher installed
 
-Java 17 or higher
-Node.js 16 or higher
-Maven 3.6+
-MySQL (for production)
+Maven 3.6+ installed
 
-Backend Setup
-Clone the repository
+Git installed
+
+Modern web browser
+
+⚙️ Step-by-Step Setup
+1️⃣ Clone Repository
 bash
 git clone https://github.com/amanullah435islam/cmed_assignmennt-react-spring-boot.git
-cd cmed_assignmennt-react-spring-boot/backend
-Configure database (Update application.properties)
-
-properties
-spring.datasource.url=jdbc:mysql://localhost:3306/hospital_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-Run the application
-
+cd cmed_assignmennt-react-spring-boot
+2️⃣ Backend Setup
 bash
+# Navigate to backend directory
+cd backend
+
+# Build the project
 mvn clean install
+
+# Run Spring Boot application
 mvn spring-boot:run
 Backend will start at: http://localhost:8080
 
-Frontend Setup
-Navigate to frontend directory
-
+3️⃣ Frontend Setup
 bash
-cd ../frontend
-Install dependencies
+# Open new terminal and navigate to frontend directory
+cd frontend
 
-bash
+# Install dependencies
 npm install
-Start development server
 
-bash
+# Start React development server
 npm start
 Frontend will start at: http://localhost:3000
 
-📡 API Endpoints
-Authentication
-Method	Endpoint	Description
-POST	/api/auth/register	User registration
-POST	/api/auth/login	User login
-POST	/api/auth/logout	User logout
+4️⃣ Verify Installation
+✅ Backend: Visit http://localhost:8080/api/auth/test
 
-Prescription Management
-Method	Endpoint	Description
-GET	/api/prescriptions	Get all prescriptions
-POST	/api/prescriptions	Create new prescription
-GET	/api/prescriptions/{id}	Get prescription by ID
-PUT	/api/prescriptions/{id}	Update prescription
-DELETE	/api/prescriptions/{id}	Delete prescription
+✅ Frontend: Visit http://localhost:3000
 
-Analytics
-Method	Endpoint	Description
-GET	/api/analytics/daily	Daily prescription stats
-GET	/api/analytics/monthly	Monthly analytics
+✅ H2 Console: http://localhost:8080/h2-console
 
-🔧 Configuration
-Backend Configuration (application.properties)
-properties
-# Server Configuration
-server.port=8080
+🗂️ Default Access
+Service	URL	Credentials
+React Frontend	http://localhost:3000	Register new account
+Spring Boot API	http://localhost:8080	-
+H2 Database Console	http://localhost:8080/h2-console	JDBC URL: jdbc:h2:mem:prescriptiondb
+Username: sa
+Password: (empty)
+🎯 Usage Guide
+👤 For Medical Staff
+1️⃣ Account Registration
+json
+{
+  "username": "doctor1",
+  "password": "securepassword",
+  "name": "Dr. John Smith",
+  "userRole": "DOCTOR"
+}
+2️⃣ Login to System
+Navigate to http://localhost:3000/login
 
-# JWT Configuration
-app.jwt.secret=your-jwt-secret-key
-app.jwt.expiration=86400000
+Enter credentials
 
-# H2 Database (Development)
-spring.datasource.url=jdbc:h2:mem:hospitaldb
-spring.datasource.username=sa
-spring.datasource.password=
+Receive JWT token for API access
 
-# JPA Configuration
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-Frontend Configuration
-Create .env file in frontend directory:
+3️⃣ Manage Prescriptions
+Create: Fill prescription form with patient details
 
-env
-REACT_APP_API_BASE_URL=http://localhost:8080/api
-REACT_APP_APP_NAME=Hospital Management System
-👥 Default Users
-After starting the application, these users are available:
+View: Browse all prescriptions with search/filter
 
-Doctor Account:
-Username: doctor1
-Password: password
-Role: DOCTOR
+Edit: Update existing prescription records
 
-Admin Account:
-Username: admin
-Password: admin123
-Role: ADMIN
+Delete: Remove outdated prescriptions
 
+4️⃣ View Analytics
+Access dashboard for real-time statistics
+
+View day-wise prescription trends
+
+Identify peak operational hours
+
+📝 Prescription Form Fields
+Field	Type	Required	Description
+Patient Name	Text	✅	Full name of the patient
+Age	Number	✅	Patient's age
+Gender	Dropdown	✅	Male/Female/Other
+Prescription Date	Date	✅	Date of prescription
+Diagnosis	Textarea	❌	Medical diagnosis details
+Medicines	Textarea	❌	Prescribed medications
+Next Visit Date	Date	❌	Follow-up appointment date
+🔗 API Endpoints
+🔐 Authentication Endpoints
+Method	Endpoint	Description	Request Body
+POST	/api/auth/register	User registration	{username, password, name, userRole}
+POST	/api/auth/login	User login	{username, password}
+POST	/api/auth/logout	User logout	-
+GET	/api/auth/validate	Validate token	-
+💊 Prescription Endpoints
+Method	Endpoint	Description	Parameters
+GET	/api/prescriptions	Get all prescriptions	page, size, sort
+GET	/api/prescriptions/{id}	Get prescription by ID	id
+POST	/api/prescriptions	Create new prescription	Prescription object
+PUT	/api/prescriptions/{id}	Update prescription	id, Prescription object
+DELETE	/api/prescriptions/{id}	Delete prescription	id
+GET	/api/prescriptions/search	Search prescriptions	query, date
+📊 Analytics Endpoints
+Method	Endpoint	Description	Parameters
+GET	/api/analytics/daily	Daily prescription stats	startDate, endDate
+GET	/api/analytics/monthly	Monthly analytics	year, month
+GET	/api/analytics/peak-hours	Busiest hours analysis	date
 📊 Database Schema
-Users Table
+👥 Users Table
 sql
 CREATE TABLE users (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
     username VARCHAR(255) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
-    name VARCHAR(255) NOT NULL,
-    user_role VARCHAR(50) NOT NULL
+    user_role VARCHAR(50) NOT NULL DEFAULT 'USER',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-Prescriptions Table
+💊 Prescriptions Table
 sql
 CREATE TABLE prescriptions (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    patient_name VARCHAR(255) NOT NULL,
-    patient_age INT NOT NULL,
-    patient_gender VARCHAR(10) NOT NULL,
-    diagnosis TEXT NOT NULL,
-    medicines TEXT NOT NULL,
     prescription_date DATE NOT NULL,
-    next_visit_date DATE
+    patient_name VARCHAR(255) NOT NULL,
+    patient_age INTEGER NOT NULL,
+    patient_gender VARCHAR(10) NOT NULL,
+    diagnosis TEXT,
+    medicines TEXT,
+    next_visit_date DATE,
+    created_by BIGINT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (created_by) REFERENCES users(id)
 );
+📈 Sample Data
+sql
+-- Default users
+INSERT INTO users (name, username, password, user_role) VALUES 
+('Dr. Amanullah Islam', 'doctor1', '$2a$10$encrypted', 'DOCTOR'),
+('Admin User', 'admin', '$2a$10$encrypted', 'ADMIN');
 
-🐛 Troubleshooting
-Common Issues
-Port already in use
+-- Sample prescriptions
+INSERT INTO prescriptions (prescription_date, patient_name, patient_age, patient_gender, diagnosis, medicines, next_visit_date) VALUES
+('2024-11-13', 'John Doe', 35, 'Male', 'Common Cold', 'Paracetamol 500mg', '2024-11-20'),
+('2024-11-13', 'Jane Smith', 28, 'Female', 'Headache', 'Ibuprofen 400mg', '2024-11-27');
+👨‍💻 Developer
+<div align="center">
+🎓 Amanullah Islam
+💻 Full Stack Java Developer
+📧 Email: aman435islam@gmail.com
+🔗 GitHub: @amanullah435islam
+💼 Portfolio: [Your Portfolio Link]
+
+Skills: Java, Spring Boot, React.js, MySQL, REST APIs, JWT, Bootstrap
+
+</div>
+🤝 Contributing
+We welcome contributions from the community! Here's how you can help:
+
+🐛 Reporting Issues
+Check existing issues first
+
+Create a new issue with:
+
+Detailed description
+
+Steps to reproduce
+
+Expected vs actual behavior
+
+Screenshots (if applicable)
+
+💡 Feature Requests
+Open an issue with "[FEATURE]" prefix
+
+Describe the proposed feature
+
+Explain the benefits and use cases
+
+🔧 Development Contribution
+Fork the repository
+
+Create a feature branch:
 
 bash
-# Change port in application.properties
-server.port=8081
-Database connection error
-Check MySQL service is running
-Verify database credentials
-CORS issues
-Ensure backend CORS is configured
-Check frontend API base URL
-JWT errors
-Verify JWT secret in properties
-Check token expiration time
+git checkout -b feature/AmazingFeature
+Commit your changes:
 
-🤝 Contributing
-We welcome contributions! Please follow these steps:
-Fork the repository
-Create a feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
+bash
+git commit -m "Add AmazingFeature"
+Push to the branch:
+
+bash
+git push origin feature/AmazingFeature
 Open a Pull Request
-Development Guidelines
+
+📝 Code Guidelines
 Follow Java and React best practices
+
 Write meaningful commit messages
-Add tests for new features
+
+Add comments for complex logic
+
 Update documentation accordingly
 
-📝 License
+Test thoroughly before submitting
+
+📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-👨‍💻 Developer
-Amanullah Islam
-GitHub: @amanullah435islam
-Email: aman435islam@gmail.com
+text
+MIT License
 
+Copyright (c) 2024 Amanullah Islam
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 🙏 Acknowledgments
-Spring Boot team for excellent documentation
-React community for awesome components
-IsDB-BISEW for IT scholarship program
-All contributors and testers
-⭐ Star this repository if you find it helpful!
+<div align="center">
+🎯 Special Thanks To:
+Contributor	Contribution
+Spring Boot Team	Excellent framework and documentation
+React Community	Amazing components and ecosystem
+H2 Database Team	Lightweight in-memory database
+Bootstrap Team	Responsive UI components
+Medical Professionals	Real-world insights and feedback
+IsDB-BISEW	IT Scholarship Programme support
+</div>
+📞 Support & Contact
+<div align="center">
+🚨 Need Help?
+📧 Email: aman435islam@gmail.com
 
-📞 Support
-If you have any questions or need help, please:
-Check the Issues page
-Create a new issue with detailed description
-Contact via email: aman435islam@gmail.com
+💬 GitHub Issues: Create Issue
 
+🔧 Documentation: Check this README first
+
+🌟 Found this project useful?
+Please consider giving it a ⭐ Star on GitHub!
+
+</div>
 <div align="center">
 🚀 Happy Coding! 🚀
 Built with ❤️ using Spring Boot & React.js
+
+⭐ Don't forget to star this repository if you find it helpful!
+
 </div>
