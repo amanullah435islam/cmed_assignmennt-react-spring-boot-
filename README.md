@@ -1,37 +1,19 @@
 💊 CMED Hospital Management System
 <div align="center">
-https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=java
-https://img.shields.io/badge/Spring%2520Boot-3.5.7-brightgreen?style=for-the-badge&logo=springboot
-https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react
-https://img.shields.io/badge/JWT-Authentication-yellow?style=for-the-badge&logo=jsonwebtokens
-https://img.shields.io/badge/H2-Database-lightgrey?style=for-the-badge&logo=h2
-https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap
-https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge
-
 A complete full-stack hospital management solution with React frontend and Spring Boot backend
-
 </div>
+
 📖 Table of Contents
 🌟 Overview
-
 🚀 Features
-
 🛠️ Tech Stack
-
 📁 Project Structure
-
 📦 Installation
-
 🎯 Usage Guide
-
 🔗 API Endpoints
-
 📊 Database Schema
-
 👨‍💻 Developer
-
 📄 License
-
 🙏 Acknowledgments
 
 🌟 Overview
@@ -39,58 +21,38 @@ CMED Hospital Management System is a modern full-stack web application designed 
 
 🎯 Key Benefits
 ⚡ Real-time prescription management
-
 🔒 Secure JWT-based authentication
-
 📱 Responsive design for all devices
-
 📊 Advanced analytics and reporting
-
 🏥 Professional healthcare interface
 
 🚀 Features
 🔐 Authentication & Security
 ✅ JWT Token-based Authentication
-
 ✅ Role-based Access Control (Doctor/Admin)
-
 ✅ Secure Password Encryption (BCrypt)
-
 ✅ Session Management
-
 ✅ Protected API Routes
 
 💊 Prescription Management
 ✅ Digital Prescription Creation
-
 ✅ Patient Record Management
-
 ✅ Prescription History Tracking
-
 ✅ Search & Filter Functionality
-
 ✅ Bulk Operations Support
 
 📈 Analytics & Dashboard
 ✅ Real-time Prescription Analytics
-
 ✅ Day-wise Statistics
-
 ✅ Peak Hours Identification
-
 ✅ Visual Data Representation
-
 ✅ Export Reports
 
 🎨 User Experience
 ✅ Responsive React Components
-
 ✅ Modern Bootstrap UI
-
 ✅ Interactive Dashboard
-
 ✅ Mobile-Friendly Design
-
 ✅ Professional Healthcare Theme
 
 🛠️ Tech Stack
@@ -103,6 +65,7 @@ Spring Data JPA	3.5.7	Database Operations
 JWT	0.11.5	Token-based Authentication
 H2 Database	2.3.232	In-memory Database
 Maven	3.6+	Dependency Management
+
 💻 Frontend Technologies
 Technology	Version	Purpose
 React.js	18	Frontend Library
@@ -111,6 +74,7 @@ React Router DOM	6.8+	Client-side Routing
 Bootstrap	5.3+	UI Framework
 CSS3	-	Custom Styling
 JavaScript ES6+	-	Client-side Logic
+
 🛠️ Development Tools
 Tool	Purpose
 IntelliJ IDEA	Backend Development
@@ -118,8 +82,8 @@ VS Code	Frontend Development
 Postman	API Testing
 Git & GitHub	Version Control
 H2 Console	Database Management
+
 📁 Project Structure
-text
 cmed_assignmennt-react-spring-boot/
 │
 ├── 📁 backend/ (Spring Boot Application)
@@ -170,20 +134,19 @@ cmed_assignmennt-react-spring-boot/
     ├── public/
     │   └── index.html                       # HTML template
     └── package.json                         # NPM dependencies
+
+    
 📦 Installation
 ✅ Prerequisites Checklist
 Java 17 or higher installed
-
 Node.js 16 or higher installed
-
 Maven 3.6+ installed
-
 Git installed
-
 Modern web browser
 
 ⚙️ Step-by-Step Setup
 1️⃣ Clone Repository
+
 bash
 git clone https://github.com/amanullah435islam/cmed_assignmennt-react-spring-boot.git
 cd cmed_assignmennt-react-spring-boot
@@ -228,6 +191,7 @@ Password: (empty)
 🎯 Usage Guide
 👤 For Medical Staff
 1️⃣ Account Registration
+
 json
 {
   "username": "doctor1",
@@ -235,27 +199,21 @@ json
   "name": "Dr. John Smith",
   "userRole": "DOCTOR"
 }
+
 2️⃣ Login to System
 Navigate to http://localhost:3000/login
-
 Enter credentials
-
 Receive JWT token for API access
 
 3️⃣ Manage Prescriptions
 Create: Fill prescription form with patient details
-
 View: Browse all prescriptions with search/filter
-
 Edit: Update existing prescription records
-
 Delete: Remove outdated prescriptions
 
 4️⃣ View Analytics
 Access dashboard for real-time statistics
-
 View day-wise prescription trends
-
 Identify peak operational hours
 
 📝 Prescription Form Fields
@@ -267,6 +225,8 @@ Prescription Date	Date	✅	Date of prescription
 Diagnosis	Textarea	❌	Medical diagnosis details
 Medicines	Textarea	❌	Prescribed medications
 Next Visit Date	Date	❌	Follow-up appointment date
+
+
 🔗 API Endpoints
 🔐 Authentication Endpoints
 Method	Endpoint	Description	Request Body
@@ -274,6 +234,7 @@ POST	/api/auth/register	User registration	{username, password, name, userRole}
 POST	/api/auth/login	User login	{username, password}
 POST	/api/auth/logout	User logout	-
 GET	/api/auth/validate	Validate token	-
+
 💊 Prescription Endpoints
 Method	Endpoint	Description	Parameters
 GET	/api/prescriptions	Get all prescriptions	page, size, sort
@@ -282,11 +243,13 @@ POST	/api/prescriptions	Create new prescription	Prescription object
 PUT	/api/prescriptions/{id}	Update prescription	id, Prescription object
 DELETE	/api/prescriptions/{id}	Delete prescription	id
 GET	/api/prescriptions/search	Search prescriptions	query, date
+
 📊 Analytics Endpoints
 Method	Endpoint	Description	Parameters
 GET	/api/analytics/daily	Daily prescription stats	startDate, endDate
 GET	/api/analytics/monthly	Monthly analytics	year, month
 GET	/api/analytics/peak-hours	Busiest hours analysis	date
+
 📊 Database Schema
 👥 Users Table
 sql
@@ -298,6 +261,7 @@ CREATE TABLE users (
     user_role VARCHAR(50) NOT NULL DEFAULT 'USER',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 💊 Prescriptions Table
 sql
 CREATE TABLE prescriptions (
@@ -313,6 +277,7 @@ CREATE TABLE prescriptions (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (created_by) REFERENCES users(id)
 );
+
 📈 Sample Data
 sql
 -- Default users
@@ -324,6 +289,7 @@ INSERT INTO users (name, username, password, user_role) VALUES
 INSERT INTO prescriptions (prescription_date, patient_name, patient_age, patient_gender, diagnosis, medicines, next_visit_date) VALUES
 ('2024-11-13', 'John Doe', 35, 'Male', 'Common Cold', 'Paracetamol 500mg', '2024-11-20'),
 ('2024-11-13', 'Jane Smith', 28, 'Female', 'Headache', 'Ibuprofen 400mg', '2024-11-27');
+
 👨‍💻 Developer
 <div align="center">
 🎓 Amanullah Islam
@@ -331,36 +297,27 @@ INSERT INTO prescriptions (prescription_date, patient_name, patient_age, patient
 📧 Email: aman435islam@gmail.com
 🔗 GitHub: @amanullah435islam
 💼 Portfolio: [Your Portfolio Link]
-
 Skills: Java, Spring Boot, React.js, MySQL, REST APIs, JWT, Bootstrap
-
 </div>
+
 🤝 Contributing
 We welcome contributions from the community! Here's how you can help:
 
 🐛 Reporting Issues
 Check existing issues first
-
 Create a new issue with:
-
 Detailed description
-
 Steps to reproduce
-
 Expected vs actual behavior
-
 Screenshots (if applicable)
 
 💡 Feature Requests
 Open an issue with "[FEATURE]" prefix
-
 Describe the proposed feature
-
 Explain the benefits and use cases
 
 🔧 Development Contribution
 Fork the repository
-
 Create a feature branch:
 
 bash
@@ -377,21 +334,15 @@ Open a Pull Request
 
 📝 Code Guidelines
 Follow Java and React best practices
-
 Write meaningful commit messages
-
 Add comments for complex logic
-
 Update documentation accordingly
-
 Test thoroughly before submitting
 
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
 text
 MIT License
-
 Copyright (c) 2024 Amanullah Islam
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -403,6 +354,7 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
 🙏 Acknowledgments
 <div align="center">
 🎯 Special Thanks To:
@@ -413,24 +365,20 @@ H2 Database Team	Lightweight in-memory database
 Bootstrap Team	Responsive UI components
 Medical Professionals	Real-world insights and feedback
 IsDB-BISEW	IT Scholarship Programme support
+    
 </div>
 📞 Support & Contact
 <div align="center">
 🚨 Need Help?
 📧 Email: aman435islam@gmail.com
-
 💬 GitHub Issues: Create Issue
-
 🔧 Documentation: Check this README first
-
 🌟 Found this project useful?
 Please consider giving it a ⭐ Star on GitHub!
-
+    
 </div>
 <div align="center">
 🚀 Happy Coding! 🚀
 Built with ❤️ using Spring Boot & React.js
-
 ⭐ Don't forget to star this repository if you find it helpful!
-
 </div>
